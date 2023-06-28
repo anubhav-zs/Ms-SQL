@@ -24,7 +24,7 @@ public class CRUDDao {
 
     public void addStudent(int id, String name, int age) {
         try {
-            DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+//            DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
             Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
 
             String query = "insert into students values (?,?,?)";
@@ -45,7 +45,8 @@ public class CRUDDao {
     }
 
     public Student getStudent(int id) throws SQLException {
-        DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+//        DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+
 //      String dbURL=  "jdbc:sqlserver://localhost:2007;instanceName=crud-mssql;databaseName=student_crud;integratedSecurity = false";
 //        String dbURL = "jdbc:sqlserver://localhost:2007;databaseName=student_crud;user=sa;password=reallyStrongPwd123";
 //        String dbURL = "jdbc:sqlserver://localhost:2007;databaseName=student_crud";
